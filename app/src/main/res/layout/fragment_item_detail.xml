@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ItemDetailFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forage_name"
+            tools:text="wild gooseberry"
+            style="@style/Widget.Forage.ListItemTextView"
+            android:layout_margin="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forage_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/margin_between_elements"
+            android:drawableStart="@drawable/ic_location_icon"
+            tools:text="Mountain View"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forage_name" />
+
+        <View
+            style="@style/Divider"
+            android:id="@+id/location_season_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forage_location" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forage_season"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:drawablePadding="@dimen/margin_between_elements"
+            android:drawableStart="@drawable/ic_calendar_icon"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/location_season_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Currently in season" />
+
+        <View
+            android:id="@+id/season_notes_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/forage_season"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Divider" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forage_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:drawablePadding="@dimen/margin_between_elements"
+            android:drawableStart="@drawable/ic_notes_icon"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/season_notes_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="check if it's edible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:contentDescription="@string/edit_icon_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
